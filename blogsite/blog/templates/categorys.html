@@ -33,8 +33,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/blog">Home</a></li>
-            <li><a href="/blog/cat">Category</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -45,18 +45,8 @@
 
       <div class="starter-template">
 
-        {% if blog_list %}
-		<h3>最近博文</h3>
-		<ul>
-			{% for article in blog_list %}
-			<li><a href="/blog/{{article.id}}/">{{article.title}}</a></li>
-			{% endfor %}
-		</ul>
-		{% else %}	
-		<p>No articles are avaliable</p>
-		{% endif %}
 		{% if category_list %}
-		<h3>博文分类</h3>
+		<h1>博文分类</h1>
 		<ul>
 			{% for category in category_list %}
 			<li><a href="/blog/cat={{category.id}}/">{{category.name}}</li>
